@@ -8,156 +8,313 @@
 
 <body>
     <script>
-        //          constructor        //
-        // // 0.1
-        // const animals = function (Color, Weight, Food) {
-        //     this.Color = Color;
-        //     this.Weight = Weight;
-        //     this.Food = Food;
-        // }
-        // const lion = new animals("Brown", "50kg", "masahari")
-        // console.log(lion)
+        //       constructor        //
+        // 0.1
+        const animals1 = function (Color, Weight, Food) {
+            this.Color = Color;
+            this.Weight = Weight;
+            this.Food = Food;
+        }
+        const lion1 = new animals1("Brown", "50kg", "masahari")
+        console.log(lion1)
 
-        // // 0.2
-        // const Car = function (myColor, myWeigth, speed, model) {
-        //     this.color = myColor;
-        //     this.weight = myWeigth;
-        //     this.speed = speed;
-        //     this.model = model;
-        // };
+        // 0.2
+        const Car = function (myColor, myWeigth, speed, model) {
+            this.color = myColor;
+            this.weight = myWeigth;
+            this.speed = speed;
+            this.model = model;
+        };
 
-        // const ford = new Car("White", "500kgs", "200KM/H", "Ford Mustang");
-        // console.log(ford);
-        // const maruti = new Car("Red", "400kgs", "100KM/H", "Maruti Swift Dzire");
-        // console.log(maruti);
+        const ford = new Car("White", "500kgs", "200KM/H", "Ford Mustang");
+        console.log(ford);
+        const maruti = new Car("Red", "400kgs", "100KM/H", "Maruti Swift Dzire");
+        console.log(maruti);
 
-        // // 0.3
-        // const Car1 = function (myColor, myWeigth, speed, model) {
-        //     this.color = myColor;
-        //     this.weight = myWeigth;
-        //     this.speed = speed;
-        //     this.model = model;
-        // };
+        // 0.3
+        const Car1 = function (myColor, myWeigth, speed, model) {
+            this.color = myColor;
+            this.weight = myWeigth;
+            this.speed = speed;
+            this.model = model;
+        };
 
-        // Car1.prototype.display = function () {
-        //     console.log("Hello");
-        // };
-        // const ford1 = new Car1("White", "500kgs", "200KM/H", "Ford Mustang");
-        // const maruti1 = new Car1("Red", "400kgs", "100KM/H", "Maruti Swift Dzire");
-        // console.log(ford1);
-        // console.log(maruti1);
-        // maruti1.display();
-        // ford1.display();
-
-
-        //                   ES6 Classes             //
-        // class Bike {
-        //     constructor(name, weight, model, speed, color) {
-        //         this.name = name;
-        //         this.weight = weight;
-        //         this.model = model;
-        //         this.speed = speed;
-        //         this.color = color;
-        //     }
-        // }
-        // const splendor = new Bike("Splendor plus", "160kg", "2022", "100KM/hr", "Black")
-        // const deluxe = new Bike("Deluxe bike", "130kg", "2020", "80KM/hr", "Red")
-        // console.log(splendor, deluxe)
+        Car1.prototype.display = function () {
+            console.log("Hello");
+        };
+        const ford1 = new Car1("White", "500kgs", "200KM/H", "Ford Mustang");
+        const maruti1 = new Car1("Red", "400kgs", "100KM/H", "Maruti Swift Dzire");
+        console.log(ford1);
+        console.log(maruti1);
+        maruti1.display();
+        ford1.display();
 
 
-        // class animals {
-        //     constructor(name, color, food,) {
-        //         this.name = name;
-        //         this.color = color;
-        //         this.food = food;
-        //     }
-        // }
-        // const lion = new animals("lion", "Brown", "masahari")
-        // console.log(lion)
-        // const Element = new animals("Hathi", "grey", "Sakahari")
-        // console.log(Element)
+        //                 ES6 Classes             //
+        class Bike {
+            constructor(name, weight, model, speed, color) {
+                this.name = name;
+                this.weight = weight;
+                this.model = model;
+                this.speed = speed;
+                this.color = color;
+            }
+        }
+        const splendor = new Bike("Splendor plus", "160kg", "2022", "100KM/hr", "Black")
+        const deluxe = new Bike("Deluxe bike", "130kg", "2020", "80KM/hr", "Red")
+        console.log(splendor, deluxe)
 
 
-        // class account {
-        //     constructor(AccountNo, Name, Balance) {
-        //         this.account = AccountNo;
-        //         this.Name = Name;
-        //         this.Balance = Balance;
-        //     }
-        // }
-        // const Khalil = new account(57781254, "Khalil Khan", 10000)
-        // console.log(Khalil)
+        class animals {
+            constructor(name, color, food,) {
+                this.name = name;
+                this.color = color;
+                this.food = food;
+            }
+        }
+        const lion = new animals("lion", "Brown", "masahari")
+        console.log(lion)
+        const Element = new animals("Hathi", "grey", "Sakahari")
+        console.log(Element)
 
 
-        // //// Setters and Getters
-        // class Account {
-        //     constructor(accountNo, name, balance, password) {
-        //         this._balance = balance;
-        //         this.accountNo = accountNo;
-        //         this.name = name;
-        //         this.__password = password;
-        //     }
-        //     get balance() {
-        //         let password = prompt("What is your password?");
-        //         if (password === this.__password) {
-        //             return this._balance;
-        //         }else {
-        //             alert("Sorry, you have entered wrong password");
-        //         }
-        //     }
-        //     set balance(amount) {
-        //         this._balance = this._balance + amount;
-        //     }
-        // }
-        // const Khalil = new Account(83256328963, "Khalil", 10000, "abc@123");
-        // Khalil.balance = 40000;
-        // Khalil.balance = 20000;
-        // Khalil.balance = -10000
-        // console.log(Khalil.balance);
+        class account {
+            constructor(AccountNo, Name, Balance) {
+                this.account = AccountNo;
+                this.Name = Name;
+                this.Balance = Balance;
+            }
+        }
+        const Khalil1 = new account(57781254, "Khalil Khan", 10000)
+        console.log(Khalil1)
 
 
-
-        // class Email {
-        //     constructor(userName, password, balance) {
-        //         this._userName = userName;
-        //         this._password = password;
-        //         this.balance = balance
-        //     }
-        //     get userName() {
-        //         let name = prompt("Please enter your userName")
-        //         if (name === this._userName) {
-        //             let pass = Number(prompt("Please enter your password"))
-        //             if (pass === this._password) {
-        //                 return this.balance
-        //             } else {
-        //                 alert("Sorry : enter your courrct password")
-        //             }
-        //         } else {
-        //             alert("Sorry : enter your courrct username")
-        //         }
-        //     }
-        // }
-        // const x = new Email("Khalil Joya", 123456, 500000)
-        // console.log(x.userName)
+        //// Setters and Getters
+        class Account {
+            constructor(accountNo, name, balance, password) {
+                this._balance = balance;
+                this.accountNo = accountNo;
+                this.name = name;
+                this.__password = password;
+            }
+            get balance() {
+                let password = prompt("What is your password?");
+                if (password === this.__password) {
+                    return this._balance;
+                } else {
+                    alert("Sorry, you have entered wrong password");
+                }
+            }
+            set balance(amount) {
+                this._balance = this._balance + amount;
+            }
+        }
+        const Khalil = new Account(83256328963, "Khalil", 10000, "abc@123");
+        Khalil.balance = 40000;
+        Khalil.balance = 20000;
+        Khalil.balance = -10000
+        console.log(Khalil.balance);
 
 
 
-        // // Static methods
-        // class SBIAccount {
-        //     constructor(accountNo, name, balance, password) {
-        //         this.balance = balance;
-        //         this.accountNo = accountNo;
-        //         this.name = name;
-        //         this.password = password;
-        //     }
-        //     static getAddress() {
-        //         console.log("SBI bank, Jaipur");
-        //     }
-        // }
-        // const Khan = new SBIAccount(454543, "Sameer", 10000, "abc@123");
-        // SBIAccount.getAddress();
+        class Email {
+            constructor(userName, password, balance) {
+                this._userName = userName;
+                this._password = password;
+                this.balance = balance
+            }
+            get userName() {
+                let name = prompt("Please enter your userName")
+                if (name === this._userName) {
+                    let pass = Number(prompt("Please enter your password"))
+                    if (pass === this._password) {
+                        return this.balance
+                    } else {
+                        alert("Sorry : enter your courrct password")
+                    }
+                } else {
+                    alert("Sorry : enter your courrct username")
+                }
+            }
+        }
+        const x = new Email("Khalil Joya", 123456, 500000)
+        console.log(x.userName)
 
 
+
+        // Static methods
+        class SBIAccount {
+            constructor(accountNo, name, balance, password) {
+                this.balance = balance;
+                this.accountNo = accountNo;
+                this.name = name;
+                this.password = password;
+            }
+            static getAddress() {
+                console.log("SBI bank, Jaipur");
+            }
+        }
+        const Khan = new SBIAccount(454543, "Sameer", 10000, "abc@123");
+        SBIAccount.getAddress();
+
+
+
+        /////////////  ES6  Class  /////////////////
+
+        class father {
+            constructor(bike) {
+                console.log("Father constuctor started");
+                this.bike = bike;
+                console.log("Father constuctor Ended");
+            }
+        }
+        class son extends father {
+            constructor(bike) {
+                console.log("Son constuctor started");
+                super(bike)
+                console.log("Son constuctor Ended");
+            }
+            run() {
+                console.log(this.bike + " Bike is running");
+            }
+        }
+        const Khalil = new son("KTM Duke 250")
+        Khalil.run()
+
+
+
+        ///////////////////
+        class Animals {
+            constructor(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+        }
+        class Cow extends Animals {
+            constructor(name, color, legs) {
+                super(name, color);
+                this.legs = legs;
+            }
+            display() {
+                console.log(`${this.color} color ${this.name} has ${this.legs} legs`);
+            }
+        }
+        const ani = new Cow("Tiger", "Brown", 4)
+        ani.display()
+
+        ////////////////
+        class Animals {
+            constructor(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+            display() {
+                console.log("Animal Eats");
+            }
+        }
+        class Cow extends Animals {
+            constructor(name, color, legs) {
+                super(name, color);
+                this.legs = legs;
+            }
+
+        }
+
+        const WhiteCow = new Cow("Cow", "White", 4)
+        WhiteCow.display()
+        const animal = new Cow("Tiger", "Brown", 4)
+        animal.display()
+
+
+
+        //Same code in constructor function
+        const person = function (name, age, address) {
+            this.name = name;
+            this.age = age;
+            this.address = address
+        }
+
+        const son = function (name, age, address, employeeId) {
+            person.call(this, name, age, address, employeeId)
+            this.employeeId = employeeId
+        }
+
+        son.prototype = Object.create(person.prototype)
+        const Khalil0 = new son("Khalil", 18, "Jaipur", 8192621)
+        console.log(Khalil0)
+
+
+        //Same code in Es6 classes
+        class Person {
+            constructor(name, age, address) {
+                this.name = name;
+                this.age = age;
+                this.address = address;
+            }
+        }
+
+        class Employee extends Person {
+            constructor(name, age, address, employeeId, designation) {
+                super(name, age, address);
+                this.employeeId = employeeId;
+                this.designation = designation;
+            }
+        }
+
+        const raja = new Employee("Raja", 21, "Jaipurr", 34545, "Junior Engineer");
+        console.log(raja)
+
+
+        ////////////////
+        // Encapsulation: Private Class Fields and Methods
+        // ye private nhi he
+        class coffeeMachine {
+            #WaterAmount = 0
+
+            get WaterAmount() {
+                return this.#WaterAmount;
+            }
+
+            set WaterAmount(value) {
+                this.#WaterAmount = value;
+            }
+
+            display() {
+                console.log(this.#WaterAmount);
+            }
+        }
+
+        let machine = new coffeeMachine();
+        machine.WaterAmount = 100;
+        machine.display();
+        console.log(machine.#waterAmount); //error
+
+
+        ///////// 
+        class CoffeeMachine {
+            #waterAmount = 0;
+
+            get waterAmount() {
+                return this.#waterAmount;
+            }
+
+            set waterAmount(value) {
+                this.#waterAmount = value;
+            }
+
+            #display() {
+                console.log(this.#waterAmount);
+            }
+
+            printValues() {
+                this.#display();
+            }
+        }
+
+        let machine = new CoffeeMachine();
+        machine.waterAmount = 200;
+        //machine.#display(); //error
+        machine.printValues();
 
 
 
